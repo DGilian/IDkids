@@ -2,6 +2,7 @@
 let storeApp = {
   questions : [],
   currentQuestion: 0,
+  goodAnswer: 0,
 }
 
 window.onload = ()=> {
@@ -17,10 +18,17 @@ function startGame() {
 }
 
 function nextQuestion() {
+  const userAnswer = document.querySelector('input[name=answer]:checked').value;
+  if(userAnswer === storeApp.questions[storeApp.currentQuestion].correct_answer) storeApp.goodAnswer +=1
   storeApp.currentQuestion += 1
   refreshQuestion()
+  refreshGameInformation()
 }
 
+function refreshGameInformation() {
+  const totalGoodAnswer = document.getElementById('totalGoodAnswer')
+  totalGoodAnswer.innerHTML = storeApp.goodAnswer
+}
 
 function refreshQuestion() {
   const { questions, currentQuestion } = storeApp
