@@ -3,6 +3,8 @@ let storeApp = {
   questions : [],
   currentQuestion: 0,
   goodAnswer: 0,
+  timer: 20,
+  timerInterval: ()=>{}
 }
 
 window.onload = ()=> {
@@ -14,7 +16,9 @@ window.onload = ()=> {
 function startGame() {
   document.getElementById("startGame").className="hidden"
   document.getElementById("game").classList.remove("hidden")
+  document.getElementById("timer").innerHTML = storeApp.timer
   refreshQuestion()
+  storeApp.timerInterval = setInterval(setTimer, 1000);
 }
 
 function nextQuestion() {
@@ -56,6 +60,8 @@ function refreshQuestion() {
 }
 
 function endGame() {
+  clearInterval(storeApp.timerInterval)
+
   // reset block
   const questionContainer = document.getElementById("questionContainer")
   questionContainer.innerHTML =''
@@ -71,4 +77,11 @@ function endGame() {
   restartButton.onclick = () => window.location.reload()
   restartButton.classList.add("resetButton")
   questionContainer.appendChild(restartButton)
+}
+
+
+function setTimer() {
+  if(storeApp.timer === 0)   return endGame();
+  storeApp.timer -= 1
+  document.getElementById("timer").innerHTML = storeApp.timer
 }
