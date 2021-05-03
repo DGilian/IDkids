@@ -32,7 +32,7 @@ main{
   border-radius: 3px;
   border-color: #3fe64b;
 }
-
+.questionContainer,
 .gameInformation{
   display: flex;
   flex-direction: column;
@@ -52,4 +52,20 @@ main{
 
 .gameInformation h4{
   margin-right: 5px;
+}
+
+.questionContainer{
+  margin: 30px;
+  align-items: center;
+}
+
+.answersList{
+  margin: 30px;
+}
+
+.nextButton{
+  padding: 5px;
+  background-color: yellow;
+  border-radius: 3px;
+  border-color: yellow;
 }
