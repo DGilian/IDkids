@@ -13,8 +13,16 @@ window.onload = ()=> {
 function startGame() {
   document.getElementById("startGame").className="hidden"
   document.getElementById("game").classList.remove("hidden")
+  refreshQuestion()
 }
 
 function nextQuestion() {
-  console.log("next")
+  storeApp.currentQuestion += 1
+  refreshQuestion()
+}
+
+
+function refreshQuestion() {
+  const { questions, currentQuestion } = storeApp
+  document.getElementById('question').innerHTML = questions[currentQuestion].question
 }
