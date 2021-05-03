@@ -1,8 +1,12 @@
 'use strict'
+let storeApp = {
+  questions : [],
+  currentQuestion: 0,
+}
 
 window.onload = ()=> {
   callApi().then(result => {
-    console.log(result)
+    storeApp.questions = result
   })
 }
 

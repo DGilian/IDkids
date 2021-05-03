@@ -8,6 +8,8 @@ function callApi() {
     return response.text()
   })
   .then(text => {
-    return JSON.parse(text)
+    const data = JSON.parse(text)
+    const results = formatData(data.results)
+    return results
   })
 }
