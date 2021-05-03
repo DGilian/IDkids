@@ -47,12 +47,13 @@ function refreshQuestion() {
   answerList.innerHTML =''
 
   // add new answers
-  questions[currentQuestion].answers.map(answer => {
+  questions[currentQuestion].answers.map((answer, index) => {
     const label = document.createElement("label");
     const radio = document.createElement("input");
     radio.type = "radio";
     radio.name = "answer"
     radio.value = answer;
+    index === 0 && (radio.checked = "check")
     answerList.appendChild(radio)
     answerList.appendChild(label);
     label.appendChild(document.createTextNode(answer));

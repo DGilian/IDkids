@@ -97,3 +97,11 @@ main{
   border-color: green;
   color: white;
 }
+
+#timer{
+  color: red;
+}
+
+#totalGoodAnswer{
+  color: green;
+}
