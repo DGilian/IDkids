@@ -14,10 +14,19 @@
     <main>
       <section id="startGame" class="startGame">
         <h2>Ready to play ?</h2>
-        <button onclick=startGame()>start</button>
+        <button class="startButton" onclick=startGame()>start</button>
       </section>
       <section id="game" class="hidden">
-        game
+        <div class="gameInformation">
+          <div class="timerContainer">
+            <h4>timer</h4>
+            <p>60</p>
+          </div>
+          <div class="goodAnswerContainer">
+            <h4>Total good answer</h4>
+            <p>0</p>
+          </div>
+        </div>
       </section>
     </main>
     <script src="game.js"></script>

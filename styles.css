@@ -1,9 +1,15 @@
+*{
+  margin:0;
+  padding:0;
+}
+
 .hidden{
   visibility: hidden;
 }
 
 h1{
   text-align: center;
+  margin: 30px;
 }
 
 main{
@@ -16,5 +22,34 @@ main{
   text-align: center;
   box-shadow: 0 0 15px black;
   border-radius: 10px;
+  padding: 20px;
+}
+
+.startButton{
+  margin-top: 10px;
+  padding: 5px;
+  background-color: #3fe64b;
+  border-radius: 3px;
+  border-color: #3fe64b;
+}
+
+.gameInformation{
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 15px black;
+  border-radius: 10px;
   padding: 10px;
+}
+
+.timerContainer,
+.goodAnswerContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  margin: 5px;
+}
+
+.gameInformation h4{
+  margin-right: 5px;
 }
