@@ -88,3 +88,12 @@ main{
   border-radius: 3px;
   border-color: yellow;
 }
+
+.resetButton{
+  margin-top: 10px;
+  padding: 5px;
+  background-color: green;
+  border-radius: 3px;
+  border-color: green;
+  color: white;
+}
