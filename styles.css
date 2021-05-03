@@ -74,6 +74,14 @@ main{
   margin: 30px;
 }
 
+.answersList input{
+  margin-left: 15px;
+}
+
+.answersList label{
+  margin-left: 5px;
+}
+
 .nextButton{
   padding: 5px;
   background-color: yellow;
